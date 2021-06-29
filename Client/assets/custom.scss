@@ -1,0 +1,33 @@
+$theme-colors: (
+  "primary": #0066ff,
+  "secondary": #F50057,
+);
+
+@import "node_modules/bootstrap/scss/bootstrap";
+
+.font-1 {
+  font-family: "Segoe UI";
+}
+
+body {
+  font-family: "Segoe UI";
+}
+
+.zoom {
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.zoom:hover {
+  transform: scale(1.1);
+}
+
+.editable {
+  user-select: none;
+  border: none;
+  outline: none;
+}
+
+.border-cover-5 {
+  border-radius: 5px;
+}

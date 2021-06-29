@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>House Price Predictor</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="assets/custom.css" />
+  </head>
+  <body>
+    <div class="container-fluid font-1">
+      <div class="row vh-100">
+        <div
+          class="col-sm-12 col-md-6 col-lg-6 p-5 h-100 bg-secondary text-white"
+          id="LeftBanner"
+        >
+          <form method="POST" class="container-fluid form my-5">
+            <div class="row">
+              <h1>Bengaluru House Prices</h1>
+              <h6 class="fw-normal">Enter required details to estimate your house price in the Bengaluru city.</h6>
+            </div>
+            <div class="row my-5">
+              <div class="my-4">
+                <label for="" class="form-label">Area (Sq Ft.)</label>
+                <input type="number" class="form-control form-control-lg floatLabel" id="uiSqft" name="1000" placeholder="1000" min="200" maxlength="10000">
+              </div>
+              <div class="my-4">
+                <label for="" class="form-label">BHKs</label>
+                <div class="container">
+                  <div class="row">
+                    <div class="form-check col-2 d-flex align-items-center">
+                      <input class="form-check-input" type="radio" name="uiBHK" id="radio-bhk-1">
+                      <label class="form-check-label fs-4" for="radio-bhk-1">
+                        1
+                      </label>
+                    </div>
+                    <div class="form-check col-2 d-flex align-items-center">
+                      <input class="form-check-input" type="radio" name="uiBHK" id="radio-bhk-2">
+                      <label class="form-check-label fs-4" for="radio-bhk-2">
+                        2
+                      </label>
+                    </div>
+                    <div class="form-check col-2 d-flex align-items-center">
+                      <input class="form-check-input" type="radio" name="uiBHK" id="radio-bhk-3">
+                      <label class="form-check-label fs-4" for="radio-bhk-3">
+                        3
+                      </label>
+                    </div>
+                    <div class="form-check col-2 d-flex align-items-center">
+                      <input class="form-check-input" type="radio" name="uiBHK" id="radio-bhk-4">
+                      <label class="form-check-label fs-4" for="radio-bhk-4">
+                        4
+                      </label>
+                    </div>
+                    <div class="form-check col-2 d-flex align-items-center">
+                      <input class="form-check-input" type="radio" name="uiBHK" id="radio-bhk-5">
+                      <label class="form-check-label fs-4" for="radio-bhk-5">
+                        5
+                      </label>
+                    </div>
+                    <div class="form-check col-2 d-flex align-items-center">
+                      <input class="form-check-input" type="radio" name="uiBHK" id="radio-bhk-6">
+                      <label class="form-check-label fs-4" for="radio-bhk-6">
+                        6
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="my-4">
+                <label for="" class="form-label">Bathrooms</label>
+                <div class="container">
+                  <div class="row">
+                    <div class="form-check col-2 d-flex align-items-center">
+                      <input class="form-check-input" type="radio" name="uiBathrooms" id="radio-bath-1">
+                      <label class="form-check-label fs-4" for="radio-bath-1">
+                        1
+                      </label>
+                    </div>
+                    <div class="form-check col-2 d-flex align-items-center">
+                      <input class="form-check-input" type="radio" name="uiBathrooms" id="radio-bath-2">
+                      <label class="form-check-label fs-4" for="radio-bath-2">
+                        2
+                      </label>
+                    </div>
+                    <div class="form-check col-2 d-flex align-items-center">
+                      <input class="form-check-input" type="radio" name="uiBathrooms" id="radio-bath-3">
+                      <label class="form-check-label fs-4" for="radio-bath-3">
+                        3
+                      </label>
+                    </div>
+                    <div class="form-check col-2 d-flex align-items-center">
+                      <input class="form-check-input" type="radio" name="uiBathrooms" id="radio-bath-4">
+                      <label class="form-check-label fs-4" for="radio-bath-4">
+                        4
+                      </label>
+                    </div>
+                    <div class="form-check col-2 d-flex align-items-center">
+                      <input class="form-check-input" type="radio" name="uiBathrooms" id="radio-bath-5">
+                      <label class="form-check-label fs-4" for="radio-bath-5">
+                        5
+                      </label>
+                    </div>
+                    <div class="form-check col-2 d-flex align-items-center">
+                      <input class="form-check-input" type="radio" name="uiBathrooms" id="radio-bath-6">
+                      <label class="form-check-label fs-4" for="radio-baht-6">
+                        6
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="my-4">
+                <label for="" class="form-label">Locations</label>
+                <select class="form-select form-select-lg location" id="uiLocations">
+                  <option disabled selected value="">Choose the location</option>
+                  <option >Electronic Nagar</option>
+                  <option >Rajaji Nagar</option>
+                </select>
+              </div>
+              <div class="my-4 d-flex justify-content-start">
+                <button type="submit" class="btn btn-lg btn-dark text-white fs-5 px-3" onclick="onClickEstimatedPrice()">Estimate</button>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div
+          class="col-sm-12 col-md-6 col-lg-6 p-5 h-100 bg-white"
+          id="RightBanner"
+        >
+          <div class="container h-100">
+            <div class="row mt-5">
+              <h6 class="text-center">Price</h6>
+            </div>
+            <div class="row d-flex justify-content-center align-items-center">
+                <h1 class="fs-1 result fw-bold text-center">₹ <span class="result" id="uiEstimatedPrice">188</span> Millions</h1>
+            </div>
+            <div class="row d-flex justify-content-center text-center h-75 mt-5 w-100">
+                <img src="assets/images/house.svg" alt="house" class="w-100 zoom">
+                <h1 class="display-6 fw-normal text-secondary fw-bold">House Price Estimator</h1>
+                <span>Developed by<h3 class="fs-5">Arya Kagathara | Dhaval Patel</h3><span class="fw-normal">Creator | Mentor</span></span>
+
+                
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </body>
+
+  <script src="assets/app.js"></script>
+</html>
