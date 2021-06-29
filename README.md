@@ -8,10 +8,10 @@ Dataset: Bangaluru House Price Prediction Datatset (Kaggle)
 Script: Jupyter Model Script
 Server: Django
 
-## To Run
+## To Work on Project or Run It
 
 Goto Server Folder
-## `cd Server`
+### `cd Server`
 
 Run Project
-## `python server.py`
+### `python server.py`
